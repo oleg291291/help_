@@ -28,7 +28,7 @@ for(let j = 0; j < s.length; j++){
 
 
   if(s[j] == '1'){
-    console.log('1!');
+    //console.log('1!');
     var kArrPre1 = [];
     for(let k = 0; k <= N; k++){
       let b = k + j
@@ -37,7 +37,7 @@ for(let j = 0; j < s.length; j++){
         }
     }
     kArr.push(kArrPre1);
-    console.log(kArrPre1);
+    //console.log(kArrPre1);
   }
   if(s[j] == '0') {
     console.log('0!');
@@ -49,12 +49,12 @@ for(let j = 0; j < s.length; j++){
         }
     }
     
-    console.log(kArrPre0);
+    //console.log(kArrPre0);
     kArr.push(kArrPre0);
     
   }
 }
-console.log(kArr);
+//console.log(kArr);
 var allRes = 0
 for(let row = 0; row < kArr.length; row++){
   for(let col = 0; col < kArr[row].length; col++){
