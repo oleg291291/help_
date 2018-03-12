@@ -7,7 +7,7 @@ for (let i = 0; i < pairs.length; i++){
   N = N * pow 
 }
 console.log(N)
-if (N > 999){
+if (N > 99999){
   console.log("break!")
   return "break!"
 }
@@ -54,9 +54,24 @@ for(let j = 0; j < s.length; j++){
     
   }
 }
-
-
 console.log(kArr);
-
+var allRes = 0
+for(let row = 0; row < kArr.length; row++){
+  for(let col = 0; col < kArr[row].length; col++){
+    let spot = kArr[row][col];
+    let counter = 0;
+    for(let rowX = 0; rowX < kArr.length; rowX++){
+      if(kArr[rowX].indexOf(spot) != -1){
+      counter++;
+    }
+    if(counter == kArr.length){
+      allRes++;
+    }
+    }
+  }
+}
+var res = allRes / kArr.length;
+var result = res % 1000000007;
+return result
 
 }
