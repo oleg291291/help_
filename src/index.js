@@ -29,11 +29,11 @@ for(let j = 0; j < s.length; j++){
 
   if(s[j] == '1'){
     console.log('1!');
-    let kArrPre1 = "";
+    var kArrPre1 = [];
     for(let k = 0; k <= N; k++){
       let b = k + j
         if (b != 0 && gcd_rec(N, b) == 1){
-            kArrPre1 += k + ",";
+            kArrPre1.push(k)
         }
     }
     kArr.push(kArrPre1);
@@ -41,11 +41,11 @@ for(let j = 0; j < s.length; j++){
   }
   if(s[j] == '0') {
     console.log('0!');
-    let kArrPre0 = "";
+    var kArrPre0 = [];
     for(let kk = 0; kk <= N; kk++){
       let c = kk + j
         if (c != 0 && gcd_rec(N, c) != 1){
-            kArrPre0 += kk + ",";
+            kArrPre0.push(kk)
         }
     }
     
