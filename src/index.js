@@ -9,7 +9,7 @@ for (let i = 0; i < pairs.length; i++){
 console.log(N)
 if (N > 99999){
   console.log("break!")
-  return "break!"
+  return false
 }
 //////////////////////
 
